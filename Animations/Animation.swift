@@ -11,25 +11,11 @@ import Spring
 
 struct Animation {
     
-    static private let animations = [
-        "wobble",
-        "shake",
-        "zoomIn",
-        "morph",
-        "zoomIn",
-        "swing",
-        "fadeIn"
-    ]
+    static func getAnimations() -> [String] {
+        return DataManager.animations
+    }
     
-    static private let curve = [
-        "easeIn",
-        "easeOut",
-        "easeInOut",
-        "linear",
-        "spring"
-    ]
-    
-    static public func getAnimation() -> (String, String) {
-        return (animations.randomElement()!, curve.randomElement()!)
+    static func getCurves() -> [String] {
+        return DataManager.curves
     }
 }

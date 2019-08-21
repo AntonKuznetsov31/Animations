@@ -80,11 +80,9 @@
                     </view>
                     <connections>
                         <outlet property="animationName" destination="DlX-qY-Ou0" id="yaf-LT-9WH"/>
-                        <outlet property="curve" destination="4pG-yZ-c7y" id="Hfa-T6-mJ9"/>
+                        <outlet property="curveName" destination="4pG-yZ-c7y" id="Hfa-T6-mJ9"/>
                         <outlet property="mainButton" destination="i7I-f4-X5T" id="ABD-O7-dar"/>
                         <outlet property="mainImageView" destination="zbD-3N-cNV" id="yCr-Uw-7Kv"/>
-                        <outletCollection property="allLabels" destination="DlX-qY-Ou0" collectionClass="NSMutableArray" id="ZSg-ld-xCn"/>
-                        <outletCollection property="allLabels" destination="4pG-yZ-c7y" collectionClass="NSMutableArray" id="oRa-ii-qAC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

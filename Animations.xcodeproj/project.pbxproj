@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09D9C96EA3B089C0856FBE26 /* Pods_Animations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CACB3C8FA47F7F78B59A30 /* Pods_Animations.framework */; };
+		E14DF5D0230D759700E990DE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14DF5CF230D759700E990DE /* DataManager.swift */; };
 		E1625727230C47290044A0EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1625726230C47290044A0EF /* AppDelegate.swift */; };
 		E1625729230C47290044A0EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1625728230C47290044A0EF /* ViewController.swift */; };
 		E162572C230C47290044A0EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E162572A230C47290044A0EF /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		0208F772651F144CB21C51AE /* Pods-Animations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animations.release.xcconfig"; path = "Target Support Files/Pods-Animations/Pods-Animations.release.xcconfig"; sourceTree = "<group>"; };
 		23CACB3C8FA47F7F78B59A30 /* Pods_Animations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Animations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BB4B94C1CD2EEA660764CC0 /* Pods-Animations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animations.debug.xcconfig"; path = "Target Support Files/Pods-Animations/Pods-Animations.debug.xcconfig"; sourceTree = "<group>"; };
+		E14DF5CF230D759700E990DE /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		E1625723230C47290044A0EF /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1625726230C47290044A0EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1625728230C47290044A0EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				E1625726230C47290044A0EF /* AppDelegate.swift */,
 				E1625728230C47290044A0EF /* ViewController.swift */,
 				E195A315230C67B600B39E44 /* Animation.swift */,
+				E14DF5CF230D759700E990DE /* DataManager.swift */,
 				E162572A230C47290044A0EF /* Main.storyboard */,
 				E162572D230C472B0044A0EF /* Assets.xcassets */,
 				E162572F230C472B0044A0EF /* LaunchScreen.storyboard */,
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1625729230C47290044A0EF /* ViewController.swift in Sources */,
+				E14DF5D0230D759700E990DE /* DataManager.swift in Sources */,
 				E195A316230C67B600B39E44 /* Animation.swift in Sources */,
 				E1625727230C47290044A0EF /* AppDelegate.swift in Sources */,
 			);

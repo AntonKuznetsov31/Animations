@@ -14,49 +14,58 @@ class ViewController: UIViewController {
     // MARK: - IBOutlets
     
     @IBOutlet weak var animationName: SpringLabel!
-    @IBOutlet weak var curve: SpringLabel!
-    
-    @IBOutlet var allLabels: [SpringLabel]!
+    @IBOutlet weak var curveName: SpringLabel!
     
     @IBOutlet weak var mainImageView: SpringImageView!
     @IBOutlet weak var mainButton: SpringButton!
     
     // MARK: - Private Properties
     
-    private var myAnimation: (animation: String, curve: String) = ("", "")
+    private var myAnimations: [String] = []
+    private var myCurves: [String] = []
+    private var index = 0
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
-        myAnimation = Animation.getAnimation()
-        updateUIWith(myAnimation)
+        myAnimations = Animation.getAnimations()
+        myCurves = Animation.getCurves()
+        updateUIUsing(index)
+        mainButton.setTitle(myAnimations[index], for: .normal)
     }
     
     // MARK: - IBActions
     
     @IBAction func buttonPressed(_ sender: UIButton) {
-        mainImageView.animation = myAnimation.animation
-        mainImageView.curve = myAnimation.curve
         
-        mainImageView.animate()
-        animateLabelsWith(myAnimation)
-        
-        myAnimation = Animation.getAnimation()
-        updateUIWith(myAnimation)
+        if index >= myAnimations.count - 1 {
+            index = 0
+        }
+        updateUIUsing(index)
+        animateUIUsing(index)
+        index += 1
+        mainButton.setTitle(myAnimations[index], for: .normal)
     }
     
     // MARK: - Private Methods
     
-    private func updateUIWith(_ animation: (String, String)) {
-        animationName.text = "Name: \(animation.0)"
-        curve.text = "Curve: \(animation.1)"
-        mainButton.setTitle(animation.0, for: .normal)
+    private func updateUIUsing(_ index: Int) {
+        animationName.text = "Name: \(myAnimations[index])"
+        curveName.text = "Curve: \(myCurves[index])"
     }
     
-    private func animateLabelsWith(_ animation: (String, String)) {
-        for label in allLabels {
-            label.animation = animation.0
-            label.animate()
-        }
+    private func animateUIUsing(_ index: Int) {
+        
+        mainImageView.animation = myAnimations[index]
+        mainImageView.curve = myCurves[index]
+        animationName.animation = myAnimations[index]
+        animationName.curve = myCurves[index]
+        curveName.animation = myAnimations[index]
+        curveName.curve = myCurves[index]
+        
+        mainImageView.animate()
+        mainButton.animate()
+        animationName.animate()
+        curveName.animate()
     }
 }
