@@ -23,26 +23,26 @@ class ViewController: UIViewController {
     
     // MARK: - Private Properties
     
-    private var animationToShow = ("","")
+    private var myAnimation: (animation: String, curve: String) = ("", "")
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
-        animationToShow = Animation.getAnimation()
-        updateUIWith(animationToShow)
+        myAnimation = Animation.getAnimation()
+        updateUIWith(myAnimation)
     }
     
     // MARK: - IBActions
     
     @IBAction func buttonPressed(_ sender: UIButton) {
-        mainImageView.animation = animationToShow.0
-        mainImageView.curve = animationToShow.1
+        mainImageView.animation = myAnimation.animation
+        mainImageView.curve = myAnimation.curve
         
         mainImageView.animate()
-        animateLabelsWith(animationToShow)
+        animateLabelsWith(myAnimation)
         
-        animationToShow = Animation.getAnimation()
-        updateUIWith(animationToShow)
+        myAnimation = Animation.getAnimation()
+        updateUIWith(myAnimation)
     }
     
     // MARK: - Private Methods
