@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,83 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zbD-3N-cNV" customClass="SpringImageView" customModule="Spring">
+                                <rect key="frame" x="47" y="130" width="281" height="243.66666666666663"/>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7I-f4-X5T" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="47" y="706" width="281" height="47"/>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="A06-cs-iS1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qKf-G4-vPh"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dzy-h3-4pi">
+                                <rect key="frame" x="145.66666666666666" y="227.33333333333334" width="83.666666666666657" height="48.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Animation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DlX-qY-Ou0" customClass="SpringLabel" customModule="Spring">
+                                        <rect key="frame" x="0.0" y="0.0" width="83.666666666666671" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Curve" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pG-yZ-c7y" customClass="SpringLabel" customModule="Spring">
+                                        <rect key="frame" x="0.0" y="28.333333333333314" width="83.666666666666671" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i7I-f4-X5T" secondAttribute="trailing" constant="47" id="4CE-2L-lS3"/>
+                            <constraint firstItem="dzy-h3-4pi" firstAttribute="centerX" secondItem="zbD-3N-cNV" secondAttribute="centerX" id="5Ns-TF-E9q"/>
+                            <constraint firstItem="zbD-3N-cNV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" multiplier="0.75" constant="97" id="BzK-sd-k4Y"/>
+                            <constraint firstItem="i7I-f4-X5T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="GiR-FE-pTq"/>
+                            <constraint firstItem="zbD-3N-cNV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="ZMK-N5-UfM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="i7I-f4-X5T" secondAttribute="bottom" constant="25" id="aBG-BP-p9c"/>
+                            <constraint firstItem="zbD-3N-cNV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="caA-ep-gUi"/>
+                            <constraint firstItem="zbD-3N-cNV" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="svf-f6-Qi8"/>
+                            <constraint firstItem="dzy-h3-4pi" firstAttribute="centerY" secondItem="zbD-3N-cNV" secondAttribute="centerY" id="wXV-TR-Ugi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="animationName" destination="DlX-qY-Ou0" id="yaf-LT-9WH"/>
+                        <outlet property="curve" destination="4pG-yZ-c7y" id="Hfa-T6-mJ9"/>
+                        <outlet property="mainButton" destination="i7I-f4-X5T" id="ABD-O7-dar"/>
+                        <outlet property="mainImageView" destination="zbD-3N-cNV" id="yCr-Uw-7Kv"/>
+                        <outletCollection property="allLabels" destination="DlX-qY-Ou0" collectionClass="NSMutableArray" id="ZSg-ld-xCn"/>
+                        <outletCollection property="allLabels" destination="4pG-yZ-c7y" collectionClass="NSMutableArray" id="oRa-ii-qAC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="88.799999999999997" y="117.48768472906404"/>
         </scene>
     </scenes>
 </document>
